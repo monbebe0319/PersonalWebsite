@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Site Info · Annejulia Milian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./stylesheet.css">
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <style>
+    /* ── PAGE HERO ── */
+    #site-hero {
+      min-height: 52vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(245,198,203,0.4) 0%, transparent 70%),
+        linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+      padding-top: 100px;
+    }
+
+    #site-hero .page-eyebrow {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.45em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    #site-hero h1 {
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      animation: fadeUp 1.2s ease both;
+    }
+
+    #site-hero .hero-sub {
+      margin-top: 0.2rem;
+    }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+      margin-top: 2rem;
+    }
+    .back-link:hover { color: var(--deep-rose); border-color: var(--rose); }
+
+    /* ── STACK OVERVIEW ── */
+    #overview {
+      background: var(--cream);
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .overview-card {
+      background: white;
+      border: 1px solid var(--gold-light);
+      padding: 1.75rem 2rem;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .overview-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(192,96,106,0.12);
+    }
+
+    .overview-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--blush));
+    }
+
+    .overview-icon { font-size: 2rem; display: block; margin-bottom: 0.75rem; }
+
+    .overview-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.68rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+    }
+
+    .overview-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--deep-rose);
+    }
+
+    /* ── HOSTING SECTION ── */
+    #hosting {
+      background: linear-gradient(180deg, var(--champagne) 0%, var(--cream) 100%);
+    }
+
+    .hosting-layout {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+    }
+
+    .hosting-card {
+      background: white;
+      border: 1px solid var(--gold-light);
+      padding: 2rem 2.5rem;
+      position: relative;
+      transition: box-shadow 0.3s;
+    }
+
+    .hosting-card:hover {
+      box-shadow: 0 8px 32px rgba(232,146,154,0.15);
+    }
+
+    .hosting-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--rose), var(--gold));
+    }
+
+    .hosting-card-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hosting-card-icon { font-size: 1.8rem; }
+
+    .hosting-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--deep-rose);
+    }
+
+    .hosting-card-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--gold);
+      letter-spacing: 0.08em;
+    }
+
+    .hosting-desc {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--brown);
+      margin-bottom: 1.1rem;
+    }
+
+    .detail-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .detail-pill {
+      padding: 0.3rem 0.85rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.82rem;
+      color: var(--brown);
+      border: 1px solid var(--rose);
+      background: rgba(245,198,203,0.12);
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .detail-pill:hover {
+      background: var(--rose);
+      color: white;
+    }
+
+    /* ── BUILD SECTION ── */
+    #build {
+      background: var(--ivory);
+    }
+
+    .build-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 640px) {
+      .build-grid { grid-template-columns: 1fr; }
+    }
+
+    .build-card {
+      background: white;
+      border: 1px solid var(--gold-light);
+      padding: 2rem;
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .build-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(192,96,106,0.15);
+    }
+
+    .build-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--blush));
+    }
+
+    .build-icon { font-size: 2rem; margin-bottom: 0.75rem; display: block; }
+
+    .build-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--deep-rose);
+      margin-bottom: 0.75rem;
+    }
+
+    .build-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+    }
+
+    .build-list li {
+      font-size: 0.92rem;
+      line-height: 1.65;
+      padding-left: 1.2rem;
+      position: relative;
+      color: var(--brown);
+    }
+
+    .build-list li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.55rem;
+      top: 0.45em;
+    }
+
+    /* ── CLOSING NOTE ── */
+    #closing {
+      background: linear-gradient(180deg, var(--cream) 0%, var(--blush) 60%, var(--cream) 100%);
+      text-align: center;
+    }
+
+    .closing-inner {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .closing-quote {
+      font-family: 'Pinyon Script', cursive;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      color: var(--deep-rose);
+      line-height: 1.3;
+      text-shadow: 1px 1px 0 rgba(201,168,76,0.25);
+      margin: 1.5rem 0;
+    }
+
+    .closing-body {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: var(--brown);
+      max-width: 540px;
+      margin: 0 auto 2rem;
+    }
+
+    /* ── CORNER DECORATIONS ── */
+    .corner { position:absolute; font-size:0.7rem; color:var(--gold); opacity:0.6; }
+    .corner.tl { top:0.75rem; left:0.75rem; }
+    .corner.tr { top:0.75rem; right:0.75rem; }
+    .corner.bl { bottom:0.75rem; left:0.75rem; }
+    .corner.br { bottom:0.75rem; right:0.75rem; }
+  </style>
+</head>
+<body>
+
+  <!-- floating pearls (match index) -->
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+  <div class="pearl"></div>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Annejulia Milian</a>
+    <ul class="nav-links">
+      <li><a href="index.html#education">Education</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#leadership">Leadership</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section id="site-hero">
+    <p class="page-eyebrow">✦ Behind the Scenes</p>
+    <h1>Site Info</h1>
+    <p class="hero-sub">How this portfolio was built &amp; where it lives</p>
+    <div class="hero-divider">
+      <span class="divider-gem">❋ ✦ ❋</span>
+    </div>
+    <a href="index.html" class="back-link">← Back to Portfolio</a>
+    <div class="ornament" style="margin-top:2rem">✦ ✦ ✦</div>
+  </section>
+
+  <!-- OVERVIEW CARDS -->
+  <section id="overview">
+    <p class="section-label fade-up">✦ At a Glance</p>
+    <h2 class="section-title fade-up delay-1">The Stack</h2>
+    <div class="overview-grid">
+      <div class="overview-card fade-up delay-1">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+        <span class="overview-icon">🌊</span>
+        <div class="overview-label">Cloud Provider</div>
+        <div class="overview-value">DigitalOcean</div>
+      </div>
+      <div class="overview-card fade-up delay-2">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+        <span class="overview-icon">🖥️</span>
+        <div class="overview-label">Server</div>
+        <div class="overview-value">Linux Droplet</div>
+      </div>
+      <div class="overview-card fade-up delay-1">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+        <span class="overview-icon">🌸</span>
+        <div class="overview-label">Frontend</div>
+        <div class="overview-value">HTML · CSS · JS</div>
+      </div>
+      <div class="overview-card fade-up delay-2">
+        <span class="corner tl">✦</span><span class="corner tr">✦</span>
+        <span class="corner bl">✦</span><span class="corner br">✦</span>
+        <span class="overview-icon">✦</span>
+        <div class="overview-label">Design</div>
+        <div class="overview-value">Custom · Hand-coded</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOSTING -->
+  <section id="hosting">
+    <p class="section-label fade-up">✦ Infrastructure</p>
+    <h2 class="section-title fade-up delay-1">Hosting & Deployment</h2>
+    <div class="hosting-layout">
+
+      <div class="hosting-card fade-up delay-1">
+        <div class="hosting-card-header">
+          <span class="hosting-card-icon">🌊</span>
+          <div>
+            <div class="hosting-card-title">DigitalOcean Droplet</div>
+            <div class="hosting-card-sub">Virtual Private Server</div>
+          </div>
+        </div>
+        <p class="hosting-desc">
+          This site is self-hosted on a DigitalOcean Droplet — a cloud-based virtual private server
+          running Linux. Rather than using a managed hosting platform, I configured and manage the
+          server environment myself, giving me full control over how the site is deployed and served.
+        </p>
+        <div class="detail-pills">
+          <span class="detail-pill">DigitalOcean</span>
+          <span class="detail-pill">Linux VPS</span>
+          <span class="detail-pill">Self-managed</span>
+          <span class="detail-pill">Cloud Hosting</span>
+        </div>
+      </div>
+
+      <div class="hosting-card fade-up delay-2">
+        <div class="hosting-card-header">
+          <span class="hosting-card-icon">⚙️</span>
+          <div>
+            <div class="hosting-card-title">Web Server Configuration</div>
+            <div class="hosting-card-sub">Custom server setup</div>
+          </div>
+        </div>
+        <p class="hosting-desc">
+          I configured and run my own web server directly on the Droplet — handling routing,
+          serving static files, and managing the server process myself. This means every request
+          to this site goes through infrastructure I set up and maintain from scratch.
+        </p>
+        <div class="detail-pills">
+          <span class="detail-pill">Custom Config</span>
+          <span class="detail-pill">Static File Serving</span>
+          <span class="detail-pill">Manual Setup</span>
+        </div>
+      </div>
+
+      <div class="hosting-card fade-up delay-1">
+        <div class="hosting-card-header">
+          <span class="hosting-card-icon">🔄</span>
+          <div>
+            <div class="hosting-card-title">Version Control & Deployment</div>
+            <div class="hosting-card-sub">Git-based workflow</div>
+          </div>
+        </div>
+        <p class="hosting-desc">
+          The codebase is version-controlled with Git. Updates are pushed from my local machine
+          and deployed to the server manually, giving me hands-on experience with a real
+          end-to-end deployment workflow.
+        </p>
+        <div class="detail-pills">
+          <span class="detail-pill">Git</span>
+          <span class="detail-pill">Manual Deploy</span>
+          <span class="detail-pill">Version Control</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BUILD DETAILS -->
+  <section id="build">
+    <p class="section-label fade-up">✦ Design & Code</p>
+    <h2 class="section-title fade-up delay-1">How It's Built</h2>
+    <div class="build-grid">
+
+      <div class="build-card fade-up delay-1">
+        <span class="build-icon">🌸</span>
+        <div class="build-title">Frontend</div>
+        <ul class="build-list">
+          <li>Pure HTML, CSS, and vanilla JavaScript — no frameworks or dependencies.</li>
+          <li>Custom CSS variables for a cohesive rose and gold color palette throughout.</li>
+          <li>Google Fonts for typography: Pinyon Script, Cormorant Garamond, and EB Garamond.</li>
+          <li>Scroll-triggered fade-up animations via the Intersection Observer API.</li>
+          <li>Responsive layout adapting gracefully to different screen sizes.</li>
+        </ul>
+      </div>
+
+      <div class="build-card fade-up delay-2">
+        <span class="build-icon">💎</span>
+        <div class="build-title">Design Decisions</div>
+        <ul class="build-list">
+          <li>Entirely hand-coded aesthetic — every detail chosen intentionally.</li>
+          <li>Floating pearl animation and decorative ✦ motifs for a romantic, editorial feel.</li>
+          <li>Custom SVG cursor to carry the rose-and-gold theme into the browser itself.</li>
+          <li>Layered radial gradients to create depth and atmosphere without images.</li>
+          <li>Repeating rose-and-gold nav border as a subtle signature detail.</li>
+        </ul>
+      </div>
+
+      <div class="build-card fade-up delay-1">
+        <span class="build-icon">🖥️</span>
+        <div class="build-title">Infrastructure</div>
+        <ul class="build-list">
+          <li>Hosted on a DigitalOcean Droplet running Linux.</li>
+          <li>Web server configured and managed from scratch on the VPS.</li>
+          <li>No third-party CMS or managed hosting — full ownership of the stack.</li>
+          <li>Deployed and updated manually via Git.</li>
+        </ul>
+      </div>
+
+      <div class="build-card fade-up delay-2">
+        <span class="build-icon">✨</span>
+        <div class="build-title">Why I Built It This Way</div>
+        <ul class="build-list">
+          <li>Wanted hands-on experience owning a real production server.</li>
+          <li>Chose vanilla HTML/CSS to demonstrate foundational web skills.</li>
+          <li>Self-hosting means understanding every layer — from DNS to the browser.</li>
+          <li>A portfolio about CS should itself be a CS project worth talking about.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section id="closing">
+    <div class="closing-inner fade-up">
+      <p class="section-label">✦ A Note</p>
+      <div class="closing-quote">Built with curiosity & care</div>
+      <p class="closing-body">
+        This portfolio is more than a resume — it's a project in itself. From configuring a
+        server on DigitalOcean to hand-writing every line of CSS, I built this site the way
+        I approach all my work: from the ground up, with attention to every detail.
+      </p>
+      <a href="index.html" class="btn btn-outline">← Back to Portfolio</a>
+      <div class="ornament" style="margin-top:2.5rem">❋ ✦ ❋</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>✦ &nbsp; Annejulia Milian &nbsp;·&nbsp; CS @ UCSD &nbsp;·&nbsp; ♛ &nbsp; ✦</p>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
