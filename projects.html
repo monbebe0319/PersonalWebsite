@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — Annejulia Milian</title>
+  <meta name="description" content="Full project list for Annejulia Milian, CS student at UC San Diego."/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./stylesheet.css"/>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
+</head>
+<body>
+
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+  <div class="pearl" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="./index.html" class="nav-logo">Annejulia Milian</a>
+
+      <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="./index.html#education">Education</a></li>
+        <li><a href="./index.html#skills">Skills</a></li>
+        <li><a href="./index.html#experience">Experience</a></li>
+        <li><a href="./index.html#projects">Home Projects</a></li>
+        <li><a href="./index.html#leadership">Leadership</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <p class="section-label fade-up" aria-hidden="true">✦ Portfolio</p>
+      <h1 class="section-title fade-up delay-1" id="page-title">All Projects</h1>
+      <p class="hero-sub fade-up delay-2">A full look at what I've built</p>
+      <div class="hero-divider fade-up delay-2" aria-hidden="true">
+        <span class="divider-gem">❋ ✦ ❋</span>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar fade-up" aria-label="Filter projects by technology">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="Java">Java</button>
+      <button class="filter-btn" data-filter="TypeScript">TypeScript</button>
+      <button class="filter-btn" data-filter="HTML">HTML</button>
+      <button class="filter-btn" data-filter="C#">C#</button>
+      <button class="filter-btn" data-filter="PHP">PHP</button>
+      <button class="filter-btn" data-filter="Unity">Unity</button>
+    </div>
+
+    <!-- PROJECTS LIST -->
+    <projects-list class="projects-page-main">
+
+      <article class="proj-entry fade-up" data-tags="HTML CSS JavaScript Git Linux">
+        <header class="proj-entry-header">
+          <h2 class="proj-entry-title">
+            <a href="https://annejulia.com" target="_blank" rel="noopener noreferrer">Portfolio Website ↗</a>
+          </h2>
+          <div class="proj-entry-meta">
+            <span class="proj-entry-date"><time datetime="2026">Spring 2026</time></span>
+            <span class="proj-entry-tech">HTML · CSS · JavaScript · DigitalOcean · Linux · Git</span>
+          </div>
+        </header>
+        <p class="proj-entry-desc">A personal portfolio website built to showcase my education, technical skills, experience, leadership, and projects. I hand-coded the site using HTML, CSS, and vanilla JavaScript, with a custom rose-and-gold visual design, responsive layouts, animations, and decorative UI details. The site is self-hosted on a DigitalOcean Linux Droplet, giving me hands-on experience with server setup, deployment, and maintaining a real website from the ground up.</p>
+        <p class="proj-entry-role-label" aria-hidden="true">✦ My Role</p>
+        <ul class="proj-entry-bullets">
+          <li>Designed and developed the full portfolio website using HTML, CSS, and JavaScript.</li>
+          <li>Created a custom visual style with responsive layouts, typography, animations, and decorative design elements.</li>
+          <li>Configured and hosted the site on a DigitalOcean Linux Droplet.</li>
+          <li>Set up and managed the web server environment for serving the site.</li>
+          <li>Used Git for version control and manual deployment updates.</li>
+          <li>Built the site as both a personal portfolio and a technical project demonstrating web development and deployment skills.</li>
+        </ul>
+        <br>
+        <ul class="proj-tags" role="list" aria-label="Technologies used">
+          <li class="proj-tag">HTML</li>
+          <li class="proj-tag">CSS</li>
+          <li class="proj-tag">JavaScript</li>
+          <li class="proj-tag">Git</li>
+          <li class="proj-tag">Linux</li>
+          <li class="proj-tag">DigitalOcean</li>
+        </ul>
+      </article>
+
+      <article class="proj-entry fade-up" data-tags="Java OOP">
+        <header class="proj-entry-header">
+          <h2 class="proj-entry-title">Zoo Simulator</h2>
+          <div class="proj-entry-meta">
+            <span class="proj-entry-date"><time datetime="2024-09">Sept. 2024</time></span>
+            <span class="proj-entry-tech">Java</span>
+          </div>
+        </header>
+        <p class="proj-entry-desc">A terminal-based zoo simulator designed and implemented in Java. The project models a functioning zoo environment where animal behaviors are driven by OOP principles and simulated time-tracking logic.</p>
+        <p class="proj-entry-role-label" aria-hidden="true">✦ My Role</p>
+        <ul class="proj-entry-bullets">
+          <li>Designed and implemented a terminal-based zoo simulator in Java.</li>
+          <li>Applied OOP principles — inheritance, polymorphism, and abstraction — to model animal behaviors.</li>
+          <li>Integrated time-tracking logic to dynamically trigger animal events based on simulated time and day.</li>
+          <li>Practiced clean code organization for long-term maintainability.</li>
+        </ul>
+        <br>
+        <ul class="proj-tags" role="list" aria-label="Technologies used">
+          <li class="proj-tag">Java</li>
+          <li class="proj-tag">OOP</li>
+          <li class="proj-tag">Terminal</li>
+        </ul>
+      </article>
+
+      <article class="proj-entry fade-up" data-tags="TypeScript Konva Figma">
+        <header class="proj-entry-header">
+          <h2 class="proj-entry-title">
+            <a href="https://github.com/monbebe0319/cse-110-project-team-9" target="_blank" rel="noopener noreferrer">Math Mage ↗</a>
+          </h2>
+          <div class="proj-entry-meta">
+            <span class="proj-entry-date"><time datetime="2025">Fall 2025</time></span>
+            <span class="proj-entry-tech">TypeScript · Konva · Figma</span>
+          </div>
+        </header>
+        <p class="proj-entry-desc">A medieval-inspired math board game aimed at 7th and 8th graders tackling linear and quadratic equations. Players navigate a fantasy kingdom — solving equations to move their characters, defeat obstacles, and progress through the board. The goal was to make algebra feel like an adventure rather than a chore, and to give students immediate, satisfying feedback for correct answers.</p>
+        <p class="proj-entry-role-label" aria-hidden="true">✦ My Role</p>
+        <ul class="proj-entry-bullets">
+          <li>Designed and implemented a Math MVC architecture to manage and sequence question logic across gameplay sessions.</li>
+          <li>Built the UI for the quadratic equations module, translating abstract math concepts into an intuitive player-facing interface.</li>
+          <li>Contributed to core game concept development, shaping the medieval theme and educational mechanics.</li>
+          <li>Provided cross-functional support to teammates, troubleshooting and collaborating across multiple areas of the project.</li>
+        </ul>
+        <br>
+        <ul class="proj-tags" role="list" aria-label="Technologies used">
+          <li class="proj-tag">TypeScript</li>
+          <li class="proj-tag">Konva</li>
+          <li class="proj-tag">Figma</li>
+        </ul>
+      </article>
+
+      <article class="proj-entry fade-up" data-tags="HTML CSS JavaScript PHP PostgreSQL Linux">
+        <header class="proj-entry-header">
+          <h2 class="proj-entry-title">Analytics Website</h2>
+          <div class="proj-entry-meta">
+            <span class="proj-entry-date">CSE 135 · <time datetime="2025">2025</time></span>
+            <span class="proj-entry-tech">HTML · CSS · JavaScript · PHP · PostgreSQL · Apache · Linux</span>
+          </div>
+        </header>
+        <p class="proj-entry-desc">A full-stack analytics and reporting website developed in a team of three for CSE 135. The project featured user authentication, dynamic data visualization, API integration, and CGI scripting across multiple programming languages. Users could log in, access reporting dashboards, and view graphical representations of stored data through interactive charts and tables.</p>
+        <p class="proj-entry-role-label" aria-hidden="true">✦ My Role</p>
+        <ul class="proj-entry-bullets">
+          <li>Developed and tested frontend and backend components for the website.</li>
+          <li>Worked with HTML, JavaScript, PHP, and PostgreSQL integration.</li>
+          <li>Implemented dynamic data visualization using ZingChart.</li>
+          <li>Helped create API endpoints that returned database information in JSON format.</li>
+          <li>Worked on login/logout session handling and page redirection.</li>
+          <li>Developed CGI scripts in C and Python for server-side functionality.</li>
+          <li>Configured and tested CGI execution within an Apache server environment.</li>
+          <li>Debugged server and CGI issues using Apache log files.</li>
+          <li>Used Git and GitHub for version control and collaborative development.</li>
+          <li>Worked within a Linux/Ubuntu environment for deployment and testing.</li>
+          <li>Assisted with debugging fetch requests, API responses, and database communication.</li>
+          <li>Participated in testing website functionality and resolving server-side issues.</li>
+        </ul>
+        <br>
+        <ul class="proj-tags" role="list" aria-label="Technologies used">
+          <li class="proj-tag">HTML</li>
+          <li class="proj-tag">CSS</li>
+          <li class="proj-tag">JavaScript</li>
+          <li class="proj-tag">PHP</li>
+          <li class="proj-tag">PostgreSQL</li>
+          <li class="proj-tag">Apache</li>
+          <li class="proj-tag">Linux</li>
+        </ul>
+      </article>
+
+      <article class="proj-entry fade-up" data-tags="C# Unity Figma Git">
+        <header class="proj-entry-header">
+          <h2 class="proj-entry-title">Forging Bonds</h2>
+          <div class="proj-entry-meta">
+            <span class="proj-entry-date"><time datetime="2026">Winter 2026</time></span>
+            <span class="proj-entry-tech">C# · Unity · Yarn Spinner · Figma · Git</span>
+          </div>
+        </header>
+        <p class="proj-entry-desc">Developed in UCSD's Video Game Development Club, Forging Bonds is a fantasy-inspired dating simulator created in Unity. Players build relationships through interactive dialogue choices, character-driven storytelling, and affection-based gameplay mechanics. The game focuses on forming meaningful connections with unique characters, where conversations and player choices strengthen or weaken relationships.</p>
+        <p class="proj-entry-role-label" aria-hidden="true">✦ My Role</p>
+        <ul class="proj-entry-bullets">
+          <li>Helped design and implement affection and relationship systems for characters.</li>
+          <li>Worked on character data models, including traits, pronouns, age, and affection values.</li>
+          <li>Assisted with audio systems and volume management functionality.</li>
+          <li>Contributed to UI and visual design ideas, including credits and logo concepts.</li>
+          <li>Worked with Yarn Spinner dialogue integration and branching conversation systems.</li>
+          <li>Helped organize project structure using MVC-style programming concepts.</li>
+          <li>Used Git/GitHub for version control, branching, merging, and collaborative development.</li>
+          <li>Participated in debugging and testing Unity systems and project builds.</li>
+          <li>Collaborated with teammates on feature development and overall game design decisions.</li>
+        </ul>
+        <br>
+        <ul class="proj-tags" role="list" aria-label="Technologies used">
+          <li class="proj-tag">C#</li>
+          <li class="proj-tag">Unity</li>
+          <li class="proj-tag">Yarn Spinner</li>
+          <li class="proj-tag">Figma</li>
+          <li class="proj-tag">Git</li>
+        </ul>
+      </article>
+
+    </projects-list>
+
+    <!-- No results message (hidden by default) -->
+    <p class="filter-empty" id="filter-empty" aria-live="polite" hidden>
+      No projects match that filter. <button class="filter-reset-inline" data-filter="all">Show all ✦</button>
+    </p>
+
+  </main>
+
+  <footer>
+    <p>✦ &nbsp; Annejulia Milian &nbsp;·&nbsp; CS @ UCSD &nbsp;·&nbsp; ♛ &nbsp; ✦</p>
+  </footer>
+
+  <script>
+    // ── Fade-up on scroll ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // ── Mobile nav toggle ──
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('nav-open');
+      });
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('nav-open');
+        });
+      });
+    }
+
+    // ── Tag filter ──
+    const filterBtns = document.querySelectorAll('.filter-btn, .filter-reset-inline');
+    const entries = document.querySelectorAll('.proj-entry');
+    const emptyMsg = document.getElementById('filter-empty');
+
+    function applyFilter(tag) {
+      let visible = 0;
+      entries.forEach(entry => {
+        const tags = entry.dataset.tags || '';
+        const show = tag === 'all' || tags.split(' ').includes(tag);
+        entry.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      emptyMsg.hidden = visible > 0;
+
+      // Update active button state
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.filter === tag);
+      });
+    }
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => applyFilter(btn.dataset.filter));
+    });
+  </script>
+</body>
+</html>

@@ -3,218 +3,238 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Annejulia Milian Personal Portfolio</title>
+  <title>Annejulia Milian — Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Annejulia Milian, BS Computer Science student at UC San Diego, Class of 2027."/>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=EB+Garamond:ital,wght@0,400;1,400&family=Pinyon+Script&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="./stylesheet.css">
-  <link rel="icon" type="image/x-icon" href="./favicon.ico">
-  <!-- Google tag (gtag.js) -->
+  <link rel="stylesheet" href="./stylesheet.css"/>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FR966QTL5C"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-68Z6XDDH7T');
   </script>
 </head>
 <body>
-  <nav>
-    <a href="#hero" class="nav-logo">Annejulia Milian</a>
-    <ul class="nav-links">
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#leadership">Leadership</a></li>
-    </ul>
-  </nav>
+  <header>
+    <nav aria-label="Primary navigation">
+      <a href="#hero" class="nav-logo">Annejulia Milian</a>
 
-  <!-- HERO -->
-  <section id="hero">
-    <h1>Annejulia Milian</h1>
-    <p class="hero-sub">B.S. Computer Science &nbsp;·&nbsp; UC San Diego &nbsp;·&nbsp; Class of 2027</p>
+      <button class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Open navigation menu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
 
-    <div class="hero-divider">
-      <span class="divider-gem">❋ ✦ ❋</span>
-    </div>
+      <ul class="nav-links" id="nav-menu" role="list">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="hero-contact fade-up delay-1">
-      <a href="mailto:milianannejulia@gmail.com">✉ milianannejulia@gmail.com</a>
-      <a href="https://www.linkedin.com/in/annejulia-milian-a82b42223/">LinkedIn</a>
-    </div>
+  <main>
+    <section id="hero" aria-labelledby="hero-name">
+      <h1 id="hero-name">Annejulia Milian</h1>
+      <br>
+      <p class="hero-sub">B.S. Computer Science &nbsp;·&nbsp; UC San Diego &nbsp;·&nbsp; Class of 2027</p>
 
-    <div class="nav-cta-row fade-up delay-2">
-      <a href="#projects" class="btn btn-filled">View My Projects</a>
-      <a href="#experience" class="btn btn-outline">Experience</a>
-      <a href="siteInfo.html" class="btn btn-outline">Site Info</a>
-    </div>
-    <div class="ornament" style="margin-top:2.5rem">✦ ✦ ✦</div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education">
-    <p class="section-label fade-up">✦ Education</p>
-    <h2 class="section-title fade-up delay-1">Where I Study</h2>
-    <div class="edu-card fade-up delay-2">
-      <span class="corner tl">✦</span>
-      <span class="corner tr">✦</span>
-      <span class="corner bl">✦</span>
-      <span class="corner br">✦</span>
-      <div class="edu-school">University of California, San Diego</div>
-      <div class="edu-degree">B.S. in Computer Science — La Jolla, CA</div>
-      <div class="edu-meta">
-        <span class="meta-pill">♛ GPA: 3.0 / 4.0</span>
-        <span class="meta-pill">🎀 Sept. 2023 – Present</span>
+      <div class="hero-divider" aria-hidden="true">
+        <span class="divider-gem">❋ ✦ ❋</span>
       </div>
-      <div class="courses-label">✦ Relevant Coursework</div>
-      <div class="course-tags">
-        <span class="course-tag">Data Structures</span>
-        <span class="course-tag">Algorithms & Analysis</span>
-        <span class="course-tag">Software Engineering</span>
-        <span class="course-tag">Computer Organization</span>
-        <span class="course-tag">Computer Graphics</span>
-        <span class="course-tag">Web Client Languages</span>
-        <span class="course-tag">Design & Analysis of Algorithms</span>
-        <span class="course-tag">Online Analytics</span>
-        <span class="course-tag">Operating Systems</span>
-        <span class="course-tag">Foundations of Programming</span>
-      </div>
-    </div>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <p class="section-label fade-up">✦ Technical Skills</p>
-    <h2 class="section-title fade-up delay-1">My Toolkit</h2>
-    <div class="skills-grid">
-      <div class="skill-card fade-up delay-1">
-        <div class="skill-card-title">💎 Languages</div>
-        <div class="skill-list">
-          <span class="skill-badge">C / C++</span>
-          <span class="skill-badge">C#</span>
-          <span class="skill-badge">HTML</span>
-          <span class="skill-badge">CSS</span>
-          <span class="skill-badge">Java</span>
-          <span class="skill-badge">JavaScript</span>
-          <span class="skill-badge">TypeScript</span>
-        </div>
-      </div>
-      <div class="skill-card fade-up delay-2">
-        <div class="skill-card-title">🎀 Tools & Frameworks</div>
-        <div class="skill-list">
-          <span class="skill-badge">Node.js</span>
-          <span class="skill-badge">Git</span>
-          <span class="skill-badge">Figma</span>
-          <span class="skill-badge">Konva</span>
-          <span class="skill-badge">Unity</span>
-          <span class="skill-badge">WordPress</span>
-          <span class="skill-badge">Google Analytics</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      <address class="hero-contact fade-up delay-1">
+        <a href="mailto:milianannejulia@gmail.com">✉ milianannejulia@gmail.com</a>
+        <a href="https://www.linkedin.com/in/annejulia-milian-a82b42223/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+      </address>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <p class="section-label fade-up">✦ Work Experience</p>
-    <h2 class="section-title fade-up delay-1">Where I've Worked</h2>
-    <div class="exp-list">
+      <div class="nav-cta-row fade-up delay-2">
+        <a href="#experience" class="btn btn-outline">Experience</a>
+      </div>
+      <p class="ornament fade-up delay-3" aria-hidden="true">✦ ✦ ✦</p>
+    </section>
+    <section id="education" aria-labelledby="edu-heading">
+      <p class="section-label fade-up" aria-hidden="true">✦ Education</p>
+      <h2 class="section-title fade-up delay-1" id="edu-heading">Where I Study</h2>
 
-      <div class="exp-card fade-up delay-1">
-        <div class="exp-header">
-          <span class="exp-role">Search Engine Optimization Intern</span>
-          <span class="exp-date">Nov. 2025 – March 2026</span>
-        </div>
-        <div class="exp-company">UKEssays.com &nbsp;·&nbsp; Remote</div>
-        <ul class="exp-bullets">
-          <li>Updated and optimized website content on WordPress to improve readability and SEO performance.</li>
-          <li>Improved internal linking structures to help users and search engines navigate pages more effectively.</li>
-          <li>Assisted in monitoring website traffic and engagement through Google Analytics.</li>
+      <article class="edu-card fade-up delay-2">
+        <span class="corner tl" aria-hidden="true">✦</span>
+        <span class="corner tr" aria-hidden="true">✦</span>
+        <span class="corner bl" aria-hidden="true">✦</span>
+        <span class="corner br" aria-hidden="true">✦</span>
+
+        <h3 class="edu-school">University of California, San Diego</h3>
+        <p class="edu-degree">B.S. in Computer Science — La Jolla, CA</p>
+
+        <ul class="edu-meta" role="list">
+          <li class="meta-pill">♛ GPA: 3.0 / 4.0</li>
+          <li class="meta-pill">🎀 <time datetime="2023-09">Sept. 2023</time> – Present</li>
         </ul>
-      </div>
 
-      <div class="exp-card fade-up delay-2">
-        <div class="exp-header">
-          <span class="exp-role">Cashier</span>
-          <span class="exp-date">June 2024 – June 2025</span>
-        </div>
-        <div class="exp-company">Mitsuwa Marketplace</div>
-        <ul class="exp-bullets">
-          <li>Operated the cash register, processed purchases, and handled payments accurately.</li>
-          <li>Provided friendly customer service in a fast-paced environment.</li>
-          <li>Assisted customers with product questions, returns, and store navigation.</li>
+        <p class="courses-label" aria-hidden="true">✦ Relevant Coursework</p>
+        <ul class="course-tags" role="list" aria-label="Relevant coursework">
+          <li class="course-tag">Data Structures</li>
+          <li class="course-tag">Algorithms &amp; Analysis</li>
+          <li class="course-tag">Software Engineering</li>
+          <li class="course-tag">Computer Organization</li>
+          <li class="course-tag">Computer Graphics</li>
+          <li class="course-tag">Web Client Languages</li>
+          <li class="course-tag">Design &amp; Analysis of Algorithms</li>
+          <li class="course-tag">Online Analytics</li>
+          <li class="course-tag">Operating Systems</li>
+          <li class="course-tag">Foundations of Programming</li>
         </ul>
+      </article>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" aria-labelledby="skills-heading">
+      <p class="section-label fade-up" aria-hidden="true">✦ Technical Skills</p>
+      <h2 class="section-title fade-up delay-1" id="skills-heading">My Toolkit</h2>
+
+      <div class="skills-grid">
+        <article class="skill-card fade-up delay-1">
+          <h3 class="skill-card-title">💎 Languages</h3>
+          <ul class="skill-list" role="list">
+            <li class="skill-badge">C / C++</li>
+            <li class="skill-badge">C#</li>
+            <li class="skill-badge">HTML</li>
+            <li class="skill-badge">CSS</li>
+            <li class="skill-badge">Java</li>
+            <li class="skill-badge">JavaScript</li>
+            <li class="skill-badge">TypeScript</li>
+          </ul>
+        </article>
+
+        <article class="skill-card fade-up delay-2">
+          <h3 class="skill-card-title">🎀 Tools &amp; Frameworks</h3>
+          <ul class="skill-list" role="list">
+            <li class="skill-badge">Node.js</li>
+            <li class="skill-badge">Git</li>
+            <li class="skill-badge">Figma</li>
+            <li class="skill-badge">Konva</li>
+            <li class="skill-badge">Unity</li>
+            <li class="skill-badge">WordPress</li>
+            <li class="skill-badge">Google Analytics</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" aria-labelledby="exp-heading">
+      <p class="section-label fade-up" aria-hidden="true">✦ Work Experience</p>
+      <h2 class="section-title fade-up delay-1" id="exp-heading">Where I've Worked</h2>
+
+      <div class="exp-list">
+
+        <article class="exp-card fade-up delay-1">
+          <header class="exp-header">
+            <h3 class="exp-role">Search Engine Optimization Intern</h3>
+            <p class="exp-date"><time datetime="2025-11">Nov. 2025</time> – <time datetime="2026-03">April 2026</time></p>
+          </header>
+          <p class="exp-company">UKEssays.com &nbsp;·&nbsp; Remote</p>
+          <ul class="exp-bullets">
+            <li>Updated and optimized website content on WordPress to improve readability and SEO performance.</li>
+            <li>Improved internal linking structures to help users and search engines navigate pages more effectively.</li>
+            <li>Assisted in monitoring website traffic and engagement through Google Analytics.</li>
+          </ul>
+        </article>
+
+        <article class="exp-card fade-up delay-2">
+          <header class="exp-header">
+            <h3 class="exp-role">Cashier</h3>
+            <p class="exp-date"><time datetime="2024-06">June 2024</time> – <time datetime="2025-06">June 2025</time></p>
+          </header>
+          <p class="exp-company">Mitsuwa Marketplace</p>
+          <ul class="exp-bullets">
+            <li>Operated the cash register, processed purchases, and handled payments accurately.</li>
+            <li>Provided friendly customer service in a fast-paced environment.</li>
+            <li>Assisted customers with product questions, returns, and store navigation.</li>
+          </ul>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" aria-labelledby="proj-heading">
+      <p class="section-label fade-up" aria-hidden="true">✦ Projects</p>
+      <h2 class="section-title fade-up delay-1" id="proj-heading">What I've Built</h2>
+
+      <div class="proj-grid">
+
+        <article class="proj-card fade-up delay-1">
+          <span class="proj-icon" aria-hidden="true">🦁</span>
+          <h3 class="proj-title">Zoo Simulator</h3>
+          <p class="proj-date">Personal Project &nbsp;·&nbsp; <time datetime="2024-09">Sept. 2024</time></p>
+          <ul class="proj-bullets">
+            <li>Designed and implemented a terminal-based zoo simulator in Java.</li>
+            <li>Applied OOP principles — inheritance, polymorphism, and abstraction — to model animal behaviors.</li>
+            <li>Integrated time-tracking logic to dynamically trigger animal events based on simulated time and day.</li>
+            <li>Practiced clean code organization for long-term maintainability.</li>
+          </ul>
+          <ul class="proj-tags" role="list" aria-label="Technologies used">
+            <li class="proj-tag">Java</li>
+            <li class="proj-tag">OOP</li>
+            <li class="proj-tag">Terminal</li>
+          </ul>
+        </article>
+
+        <article class="proj-card fade-up delay-2">
+          <span class="proj-icon" aria-hidden="true">🌸</span>
+          <h3 class="proj-title">Personal Portfolio</h3>
+          <p class="proj-date">School Project &nbsp;·&nbsp; <time datetime="2025-10">Oct. 2025</time></p>
+          <ul class="proj-bullets">
+            <li>Designed and developed a multi-page personal website to showcase projects and experience.</li>
+            <li>Implemented custom layouts and pastel aesthetic elements to reflect personal branding.</li>
+            <li>Integrated responsive design for different screen sizes and print styles.</li>
+            <li>Used custom fonts, pixel art, and interactive components for a cohesive visual identity.</li>
+          </ul>
+          <ul class="proj-tags" role="list" aria-label="Technologies used">
+            <li class="proj-tag">HTML</li>
+            <li class="proj-tag">CSS</li>
+            <li class="proj-tag">JavaScript</li>
+            <li class="proj-tag">Git</li>
+          </ul>
+        </article>
+
       </div>
 
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <p class="section-label fade-up">✦ Projects</p>
-    <h2 class="section-title fade-up delay-1">What I've Built</h2>
-    <div class="proj-grid">
-
-      <div class="proj-card fade-up delay-1">
-        <span class="proj-icon">🦁</span>
-        <div class="proj-title">Zoo Simulator</div>
-        <div class="proj-date">Personal Project &nbsp;·&nbsp; Sept. 2024</div>
-        <ul class="proj-bullets">
-          <li>Designed and implemented a terminal-based zoo simulator in Java.</li>
-          <li>Applied OOP principles — inheritance, polymorphism, and abstraction — to model animal behaviors.</li>
-          <li>Integrated time-tracking logic to dynamically trigger animal events based on simulated time and day.</li>
-          <li>Practiced clean code organization for long-term maintainability.</li>
-        </ul>
-        <div class="proj-tags">
-          <span class="proj-tag">Java</span>
-          <span class="proj-tag">OOP</span>
-          <span class="proj-tag">Terminal</span>
-        </div>
+      <div class="proj-more-cta fade-up delay-3">
+        <a href="./projects.html" class="btn btn-outline">See All Projects ✦</a>
       </div>
+    </section>
 
-      <div class="proj-card fade-up delay-2">
-        <span class="proj-icon">🌸</span>
-        <div class="proj-title">Personal Portfolio</div>
-        <div class="proj-date">School Project &nbsp;·&nbsp; Oct. 2025</div>
-        <ul class="proj-bullets">
-          <li>Designed and developed a multi-page personal website to showcase projects and experience.</li>
-          <li>Implemented custom layouts and pastel aesthetic elements to reflect personal branding.</li>
-          <li>Integrated responsive design for different screen sizes and print styles.</li>
-          <li>Used custom fonts, pixel art, and interactive components for a cohesive visual identity.</li>
-        </ul>
-        <div class="proj-tags">
-          <span class="proj-tag">HTML</span>
-          <span class="proj-tag">CSS</span>
-          <span class="proj-tag">JavaScript</span>
-          <span class="proj-tag">Git</span>
-        </div>
+    <!-- LEADERSHIP -->
+    <section id="leadership" aria-labelledby="lead-heading">
+      <p class="section-label fade-up" aria-hidden="true">✦ Leadership</p>
+      <h2 class="section-title fade-up delay-1" id="lead-heading">Campus Involvement</h2>
+
+      <div class="lead-grid">
+
+        <article class="lead-card fade-up delay-1">
+          <span class="lead-icon" aria-hidden="true">🎮</span>
+          <h3 class="lead-org">Video Game Design Club</h3>
+          <p class="lead-school">UC San Diego</p>
+          <p class="lead-role">Member &nbsp;·&nbsp; <time datetime="2025-09">Sept. 2025</time> – Present</p>
+        </article>
+
+        <article class="lead-card fade-up delay-2">
+          <span class="lead-icon" aria-hidden="true">💻</span>
+          <h3 class="lead-org">Women in Computing</h3>
+          <p class="lead-school">UC San Diego</p>
+          <p class="lead-role">Member &nbsp;·&nbsp; <time datetime="2026-01">Jan. 2026</time> – Present</p>
+        </article>
+
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section id="leadership">
-    <p class="section-label fade-up">✦ Leadership</p>
-    <h2 class="section-title fade-up delay-1">Campus Involvement</h2>
-    <div class="lead-grid">
-
-      <div class="lead-card fade-up delay-1">
-        <span class="lead-icon">🎮</span>
-        <div class="lead-org">Video Game Design Club</div>
-        <div class="lead-school">UC San Diego</div>
-        <div class="lead-role">Member &nbsp;·&nbsp; Sept. 2025 – Present</div>
-      </div>
-
-      <div class="lead-card fade-up delay-2">
-        <span class="lead-icon">💻</span>
-        <div class="lead-org">Women in Computing</div>
-        <div class="lead-school">UC San Diego</div>
-        <div class="lead-role">Member &nbsp;·&nbsp; Jan. 2026 – Present</div>
-      </div>
-
-    </div>
-  </section>
+  </main>
 
   <footer>
     <p>✦ &nbsp; Annejulia Milian &nbsp;·&nbsp; CS @ UCSD &nbsp;·&nbsp; ♛ &nbsp; ✦</p>
@@ -231,6 +251,23 @@
     }, { threshold: 0.12 });
 
     document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Mobile nav toggle
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        menu.classList.toggle('nav-open');
+      });
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle.setAttribute('aria-expanded', 'false');
+          menu.classList.remove('nav-open');
+        });
+      });
+    }
   </script>
 </body>
 </html>

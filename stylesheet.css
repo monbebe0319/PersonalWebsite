@@ -1,4 +1,4 @@
-    :root {
+:root {
       --blush: #f5c6cb;
       --rose: #e8929a;
       --deep-rose: #c0606a;
@@ -701,3 +701,396 @@
     .delay-1 { animation-delay: 0.15s; }
     .delay-2 { animation-delay: 0.3s; }
     .delay-3 { animation-delay: 0.45s; }
+    /* ── VISUALLY HIDDEN (accessible labels) ── */
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ── edu-meta / course-tags as lists ── */
+    .edu-meta {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0.75rem 0 1.25rem;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    .course-tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+    }
+
+    .proj-tags {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      padding: 0;
+    }
+
+    .skill-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      padding: 0;
+    }
+
+    /* ── NAV HIGHLIGHT LINK ── */
+    .nav-link-highlight {
+      color: var(--deep-rose) !important;
+      font-weight: 600;
+    }
+
+    /* ── PROJECTS CTA ROW ── */
+    .proj-more-cta {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    /* ── MOBILE NAV TOGGLE ── */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--deep-rose);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+
+    /* ── PROJECTS.HTML PAGE STYLES ── */
+
+    /* Page-level hero banner for projects.html */
+    .page-hero {
+      min-height: 38vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 5vw 3rem;
+      background:
+        radial-gradient(ellipse 80% 60% at 50% 40%, rgba(245,198,203,0.4) 0%, transparent 70%),
+        linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+      position: relative;
+      z-index: 2;
+    }
+
+    .page-hero h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      animation: none; /* handled by fade-up if needed */
+    }
+
+    .page-hero .hero-sub {
+      margin-top: 0.5rem;
+    }
+
+    /* Back navigation link */
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+      margin-top: 1.5rem;
+    }
+
+    .back-link:hover { color: var(--deep-rose); border-color: var(--rose); }
+
+    /* Projects page main content area */
+    .projects-page-main {
+      position: relative;
+      z-index: 2;
+      padding: 3rem 5vw 6rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    /* Individual project entry on projects.html */
+    .proj-entry {
+      background: white;
+      border: 1px solid var(--gold-light);
+      padding: 2.5rem 3rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      transition: box-shadow 0.3s;
+    }
+
+    .proj-entry:hover {
+      box-shadow: 0 8px 32px rgba(232,146,154,0.15);
+    }
+
+    .proj-entry::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--rose), var(--gold), var(--blush));
+    }
+
+    .proj-entry-header {
+      margin-bottom: 1.25rem;
+    }
+
+    .proj-entry-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--deep-rose);
+      margin-bottom: 0.3rem;
+    }
+
+    .proj-entry-title a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-light);
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .proj-entry-title a:hover {
+      color: var(--rose);
+      border-color: var(--rose);
+    }
+
+    .proj-entry-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+
+    .proj-entry-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+    }
+
+    .proj-entry-tech {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--brown);
+      opacity: 0.8;
+    }
+
+    .proj-entry-desc {
+      font-size: 0.95rem;
+      line-height: 1.75;
+      color: var(--brown);
+      margin-bottom: 1.25rem;
+    }
+
+    .proj-entry-role-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+
+    .proj-entry-bullets {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .proj-entry-bullets li {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      padding-left: 1.5rem;
+      position: relative;
+      color: var(--brown);
+    }
+
+    .proj-entry-bullets li::before {
+      content: '✦';
+      position: absolute;
+      left: 0;
+      color: var(--rose);
+      font-size: 0.55rem;
+      top: 0.48em;
+    }
+
+    .proj-entry hr {
+      display: none; /* replaced by card spacing */
+    }
+
+    /* Nav for projects.html (same as main nav but with back link) */
+    .projects-nav-back {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .projects-nav-back:hover { color: var(--deep-rose); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 700px) {
+      .nav-toggle { display: flex; }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0; right: 0;
+        background: rgba(253,246,240,0.98);
+        border-bottom: 1px solid var(--gold-light);
+        padding: 1.25rem 2rem 1.5rem;
+        gap: 1rem;
+        z-index: 99;
+      }
+
+      .nav-links.nav-open { display: flex; }
+
+      .skills-grid,
+      .proj-grid,
+      .lead-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section { padding: 90px 1.25rem 3rem; }
+
+      .edu-card { padding: 1.75rem 1.5rem; }
+
+      .exp-card { padding: 1.5rem 1.5rem; }
+
+      .proj-entry { padding: 1.75rem 1.5rem; }
+
+      .exp-header { flex-direction: column; gap: 0.2rem; }
+
+      .projects-page-main { padding: 2rem 1.25rem 4rem; }
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .fade-up {
+        opacity: 1 !important;
+        animation: none !important;
+      }
+
+      .pearl { display: none; }
+    }
+
+    /* ── PRINT ── */
+    @media print {
+      nav, header, footer, .pearl, body::before, body::after,
+      .nav-cta-row, .proj-more-cta, .ornament { display: none !important; }
+
+      body { background: white; color: black; font-size: 11pt; }
+
+      section { padding: 1rem 0; border-top: 1px solid #ccc; }
+
+      a { color: black; text-decoration: underline; }
+
+      .edu-card, .exp-card, .proj-card, .lead-card, .skill-card, .proj-entry {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        page-break-inside: avoid;
+      }
+    }
+
+    /* ── FILTER BAR (projects.html) ── */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      padding: 0 5vw 2.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .filter-btn {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+      background: rgba(255,255,255,0.5);
+      border: 1px solid var(--gold-light);
+      padding: 0.4rem 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .filter-btn:hover {
+      background: var(--champagne);
+      border-color: var(--gold);
+      color: var(--deep-rose);
+    }
+
+    .filter-btn.active {
+      background: linear-gradient(135deg, var(--rose), var(--deep-rose));
+      color: white;
+      border-color: transparent;
+    }
+
+    /* ── FILTER EMPTY MESSAGE ── */
+    .filter-empty {
+      text-align: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--brown);
+      opacity: 0.7;
+      padding: 2rem 5vw 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .filter-reset-inline {
+      background: none;
+      border: none;
+      border-bottom: 1px solid var(--gold-light);
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--deep-rose);
+      cursor: pointer;
+      padding: 0;
+      transition: border-color 0.2s;
+    }
+
+    .filter-reset-inline:hover { border-color: var(--rose); }
